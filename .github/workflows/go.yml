@@ -1,0 +1,26 @@
+name: Go
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Pull
+      run: |
+        mkdir FUCK_UPC_COVID
+        cd FUCK_UPC_COVID
+        git init
+        git pull https://github.com/slanceli/FUCK_UPC_COVID.git
+    - name: Start
+      env: 
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWD: ${{ secrets.PASSWD }}
+      run: |
+        ./FUCK_UPC_COVID -username &USERNAME -passwd $PASSWD
