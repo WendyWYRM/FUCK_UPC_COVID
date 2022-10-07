@@ -24,4 +24,5 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWD: ${{ secrets.PASSWD }}
       run: |
+        chmod +777 FUCK_UPC_COVID
         ./FUCK_UPC_COVID -username &USERNAME -passwd $PASSWD
