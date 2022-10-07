@@ -18,11 +18,12 @@ jobs:
         cd FUCK_UPC_COVID
         git init
         git pull https://github.com/slanceli/FUCK_UPC_COVID.git
-        ls
     - name: Start
       env: 
         USERNAME: ${{ secrets.USERNAME }}
         PASSWD: ${{ secrets.PASSWD }}
+      shell: bash
       run: |
+        cd FUCK_UPC_COVID
         chmod +777 FUCK_UPC_COVID
         ./FUCK_UPC_COVID -username &USERNAME -passwd $PASSWD
