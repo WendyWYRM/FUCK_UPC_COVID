@@ -18,7 +18,7 @@ jobs:
         cd FUCK_UPC_COVID
         git init
         git pull https://github.com/slanceli/FUCK_UPC_COVID.git
-        cd FUCK_UPC_COVID
+        ls
     - name: Start
       env: 
         USERNAME: ${{ secrets.USERNAME }}
