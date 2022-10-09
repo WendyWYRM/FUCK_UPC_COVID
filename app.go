@@ -12,7 +12,7 @@ import (
 
 var username string
 var passwd string
-var separated = "+++++++++++++++++++++++++++++"
+var separated = "++++++++++++++++++++++++++++++"
 
 func init() {
 	flag.StringVar(&username, "username", "0", "username")
